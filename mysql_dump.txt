@@ -1,0 +1,80 @@
+-- MySQL dump 10.13  Distrib 5.5.54, for debian-linux-gnu (armv7l)
+--
+-- Host: localhost    Database: hak4kidz
+-- ------------------------------------------------------
+-- Server version       5.5.54-0+deb8u1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `challenges`
+--
+
+DROP TABLE IF EXISTS `challenges`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `challenges` (
+  `id` int(2) DEFAULT NULL,
+  `ctext` text,
+  `answer` tinytext
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `challenges`
+--
+
+LOCK TABLES `challenges` WRITE;
+/*!40000 ALTER TABLE `challenges` DISABLE KEYS */;
+INSERT INTO `challenges` VALUES (1,'I overheard Lord Vortech saying he spotted a foundation element piece somewhere in the breezeway.  They were talking anout making waves with all the comotion about.  Whatever that means.  Anyways, once you find the piece make sure to scan it with your rellic scanner and bring it back here for me to catalog.  Good luck!','04:0B:C9:62:CA:48:81'),(2,'You\'re doing a great job!  Lord Vortech just sent his minions to collect another fragment.  I couldn\'t hear where they were going but I did see them packing up rain ponchos and umbrellas.  Figure out where they were headed and get to that fragment before they do!','04:DA:07:62:CA:48:84'),(3,'I just got word that Lord Vortech is closing in on another fragment. I think I found a clue he left behind, but I can\'t make sense of any of it.  Here\'s the text of that clue.  See if you can figure it out: QXQgdGhlIGluZm9ybWF0aW9uIGRlc2sgbG9vayBvbiB0aGUgbGVmdCBzaWRlIG9mIHRoZSBkZXNr','04:9C:A3:B2:EC:4A:80'),(4,'You are one heck of a foundation element finder! However, your job isn\'t done yet.  Lord Vortech and his goons were last seen with some archeology equipment.  I think they were digging for dinosaur bones.  But I don\'t recall dinosaur bones at Discovery World.  What else could they be after?','04:AC:FA:02:D8:49:80'),(6,'You\'ve collected all but one piece of the foundation element.  The last task before you is to figure out the combination on that box on the table and scan the last fragment.  If you were paying attention I think you might have a notion of what the combination to that lock is.  Otherwise, retracing your steps usually helps.','04:BD:CE:0A:EC:4A:80'),(5,'You are a natural at this stuff.  However, we have a lot of work to do yet.  Lord Vortech must be hot on the trail of another element fragment.  He was last seen with some popcorn and a movie ticket.  I wonder where he\'d go with those things.','05:C4:BD:0A:0D:C3:AF');
+/*!40000 ALTER TABLE `challenges` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `guides`
+--
+
+DROP TABLE IF EXISTS `guides`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `guides` (
+  `id` int(2) NOT NULL AUTO_INCREMENT,
+  `name` tinytext,
+  `ctag` tinytext,
+  `corder` tinytext,
+  `clues` text,
+  `phone` tinytext,
+  `welcome` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `guides`
+--
+
+LOCK TABLES `guides` WRITE;
+/*!40000 ALTER TABLE `guides` DISABLE KEYS */;
+INSERT INTO `guides` VALUES (1,'peter venkmen','04:F6:EA:B2:EC:4A:80','2345','This guide knows not to cross the streams, loves a good mystery, and always knows what to say if someone asks if they\'re a god.','2C:54:CF:E9:FC:B2','Hey there! Dr. Peter Venkmen here.  Thanks for finding me.  I got lost when I was chasing this free floating vapor through Discovery World.  Anyways, we have a job to do.'),(2,'Harley Quinn','04:CE:58:B2:EC:4A:80','3524','Playing cards, petty larsony, and stand-up comedy are top on this guides list.','D0:22:BE:33:81:D2','Hiya Doll! Harley Quinn. Pleased to meet your acquaintance.  Mr. J and I were trying to steal... I mean borrow some of the fossils here at Discovery world when we got seperated.  Lucky for you I showed to help you though.  That Lord Vortech gives honest criminals like me a bad name!'),(3,'Scooby Doo','04:5C:65:B2:EC:4A:81','5432','A good mystery, ghosts, and food are this guides favorite things.','5C:0A:5B:EE:1B:36','Ruh Roh!  Heheheehehehehhe.  Hi my name\'s Scooby Doo.  I\'m here to help you solve this mystery.  I\'m so glad you found me. I\'m starving!  What? no time to eat?  Ok.'),(4,'Harry Potter','04:0B:C9:62:CA:48:81','4253','Saving the world from evil, flying on brooms and living under a stair case are this guides hobbies','60:A4:4C:9E:48:39','Well, by merlin\'s beard! I\'m so thankful you found me.  I was practicing some spells out in the forrest when all of a sudden this portal openned up and sucked me through.  Well, it looks like I was sent here for a reason. Wand at the ready?  Ok then, let\'s get started.');
+/*!40000 ALTER TABLE `guides` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-03-08 18:12:16
