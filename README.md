@@ -7,3 +7,8 @@
 
 
 ` Please contribute to making my bad code better.  It's really hacked up so anything to make it better is welcome.  Submit pull requests as long as they don't break the code more.  I don't need help writing bad code.  I can do that pretty well on my own :D `
+
+
+Proxmark forums information on character tags and the LD Tag editor app:
+https://mega.nz/#!CYN3AQrJ!TNCGiQHX8qLu2H9nZ6HgcZW2FaII0iHGf0_H0yuZi1g
+http://www.proxmark.org/forum/viewtopic.php?id=2657
